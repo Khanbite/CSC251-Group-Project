@@ -105,6 +105,12 @@ public class TestLoanClassTemplate {
 		  // caculate the new myLoanAmount after minus this month's principal
 		  // add the interest paid this month to totalInterest
 		  // increment the month count
+
+		  interest = myLoanAmount * myMonthlyInterestRate;
+                principal = myMonthlyPayment - interest;
+                myLoanAmount = myLoanAmount - principal;
+                totalInterest = totalInterest + interest;
+                month++;
 	  }
 	  if (myLoanAmount < myMonthlyPayment) {
 		  // to do
