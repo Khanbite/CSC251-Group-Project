@@ -1,3 +1,11 @@
+/**
+ * Ayah, Bianca, Khani, Jessica
+ * Course: CSC.251
+ * Date: 04/27/2026
+ *
+ * This program is a loan calculator that will help you calculate monthly payments and any extra payments that are necessary (ex. interest).
+ */
+
 package groupproject2025;
 // LiveExample 10.1
 import java.util.Scanner;
