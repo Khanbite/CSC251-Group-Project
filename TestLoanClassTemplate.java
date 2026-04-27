@@ -6,7 +6,6 @@
  * This program is a loan calculator that will help you calculate monthly payments and any extra payments that are necessary (ex. interest).
  */
 
-package groupproject2025;
 // LiveExample 10.1
 import java.util.Scanner;
 
