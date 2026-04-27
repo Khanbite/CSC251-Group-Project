@@ -62,20 +62,35 @@ public class TestLoanClassTemplate {
 	  double totalInterest = 0.0;
 
 	  while (myLoanAmount >= myMonthlyPayment) {
-		  // to do A1 same as A2
+//          interest = (myLoanAmount * myMonthlyInterestRate);
+//          principal = myMonthlyPayment - interest;
+//          myLoanAmount -= principal;
+//          myLoanAmount -= extraPay;
+//          totalInterest += interest;
+//          month += 1;
+          interest = (myLoanAmount * myMonthlyInterestRate);
+          principal = myMonthlyPayment - interest;
+          totalInterest += interest;
+          if (month == 0){
+              myLoanAmount -= extraPay;
+          }
+          myLoanAmount -= principal;
+          month++;
 		  
 	  }
 	  if (myLoanAmount < myMonthlyPayment) {
-		  // to do B1 same as B2
+          totalInterest += (myMonthlyInterestRate * myLoanAmount);
+          // increment the month count
+          month++;
 	  }
 	  double interestSaved = l.getTotalInterest() - totalInterest;
-	  /*
+      /*
 	  System.out.println("total interest " + totalInterest);
 	  System.out.println("interest saved " + interestSaved);
 	  System.out.println("total month " + month);
-	  */
+       */
 	  System.out.printf("Total interest $%.2f%nTotal interest saved $%.2f%nTotal months %d %n",
-			  totalInterest, interestSaved, month);	  
+			  totalInterest, interestSaved, month);
   }
 
   /** Extra payment every month */
@@ -99,7 +114,7 @@ public class TestLoanClassTemplate {
 		  interest = (myLoanAmount * myMonthlyInterestRate);
 		  principal = myMonthlyPayment - interest;
 		  myLoanAmount -= principal;
-		  myLoanAmount -= myMonthlyPayment;
+		  myLoanAmount -= extraPay;
 		  totalInterest += interest;
 		  month += 1;
 
