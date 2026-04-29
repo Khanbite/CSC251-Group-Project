@@ -38,7 +38,7 @@ public class TestLoanClassTemplate {
       new Loan(annualInterestRate, numberOfYears, loanAmount);
 
     // Display loan date, monthly payment, and total payment, and total interest
-    System.out.printf("The loan was created on %s%n" +
+    System.out.printf("\nThe loan was created on %s%n" +
       "The monthly payment is %.2f%nThe total payment is %.2f%nThe total interest is %.2f%n%n",
       loan.getLoanDate().toString(),
       loan.getMonthlyPayment(), 
